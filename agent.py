@@ -1,12 +1,8 @@
-import os
 from openai import OpenAI
-
-client = OpenAI(
-    api_key=os.getenv("OPENAI_API_KEY")
-)
+client = OpenAI()
 
 response = client.chat.completions.create(
-    model="gpt-4o-mini",
+    model="gpt-5-nano",
     messages=[
         {"role": "user", "content": "Write a one-sentence bedtime story about a unicorn."}
     ]
